@@ -18,7 +18,7 @@ namespace Lannister_Qwiktrippin
         public int StoreNumber { get; private set; }
         public float Sales { get; private set; }
 
-        public Employee(string _name, JobTitle _position, int _storeNumber, float _sales)
+        public Employee(string _name, JobTitle _position, int _storeNumber, float _sales = 0)
         {
             Name = _name;
             Position = _position;
