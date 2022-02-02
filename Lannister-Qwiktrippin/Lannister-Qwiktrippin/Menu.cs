@@ -22,7 +22,7 @@ QuikTrip Management Systems
 ");
         }
 
-        public static string? MenuSelection()
+        public static string MenuSelection()
         {
             string[] choices = { "1", "2", "3", "4", "5" };
             string? input = Console.ReadLine();
