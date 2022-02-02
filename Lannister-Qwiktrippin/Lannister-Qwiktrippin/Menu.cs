@@ -10,7 +10,7 @@ namespace Lannister_Qwiktrippin
     {
         public static void MainMenu()
         {
-           
+
             Console.WriteLine(@"
 QuikTrip Management Systems
 
@@ -20,6 +20,19 @@ QuikTrip Management Systems
 4. Add a Store/District
 5. Exit
 ");
+        }
+
+        public static string? MenuSelection()
+        {
+            string[] choices = { "1", "2", "3", "4", "5" };
+            string? input = Console.ReadLine();
+            while (input == null || !choices.Contains(input))
+            {
+                Console.WriteLine("Enter a Valid Selection");
+                input = Console.ReadLine();
+            }
+
+            return input;
         }
     }
 }
