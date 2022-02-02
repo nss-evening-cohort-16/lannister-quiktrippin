@@ -1,3 +1,8 @@
 ﻿using Lannister_Qwiktrippin;
 
-Console.WriteLine($"Create Store #{EnterStoreNumber.Prompt()}");
+Menu.MainMenu();
+string selection = Menu.MenuSelection();
+
+Console.WriteLine($"You selected {selection}");
+
+//Console.WriteLine($"Create Store #{EnterStoreNumber.Prompt()}");
