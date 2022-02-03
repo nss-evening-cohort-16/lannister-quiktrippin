@@ -1,7 +1,7 @@
-﻿using Lannister_Qwiktrippin;
+﻿using Lannister_Qwiktrippin.prompts;
 
 Menu.MainMenu();
-string selection = Menu.MenuSelection();
+int selection = Menu.MenuSelection(5);
 
 Console.WriteLine($"You selected {selection}");
 

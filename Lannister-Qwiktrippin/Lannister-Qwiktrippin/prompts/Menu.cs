@@ -20,17 +20,19 @@ QuikTrip Management Systems
 ");
         }
 
-        public static string MenuSelection()
+        public static int MenuSelection(int _choices)
         {
-            string[] choices = { "1", "2", "3", "4", "5" };
+            int selection;
+            int[] choices = Enumerable.Range(1, _choices).ToArray();
+
             string? input = Console.ReadLine();
-            while (input == null || !choices.Contains(input))
+            while (input == null || !int.TryParse(input, out selection) || !choices.Contains(selection))
             {
                 Console.WriteLine("Enter a Valid Selection");
                 input = Console.ReadLine();
             }
 
-            return input;
+            return selection;
         }
     }
 }
