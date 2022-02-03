@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lannister_Qwiktrippin
 {
-    class Store
+    public class Store
     {
         public List<Employee> employees;
         public int storeNumber;
