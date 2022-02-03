@@ -8,13 +8,14 @@ namespace Lannister_Qwiktrippin
 {
     class Store
     {
-        List<string> store = new List<string>();
+       public List<Employee> employees = new List<Employee>();
         public float GasSale { get; set; }
         public float RetailSale { get; set; }
-        public Store (float gasSale, float retailSale)
+        public Store(float gasSale, float retailSale)
         {
             GasSale = gasSale;
             RetailSale = retailSale;
-        }
+            employees = new List<Employee>();
+        }    
     }
 }
