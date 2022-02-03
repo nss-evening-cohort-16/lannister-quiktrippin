@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Lannister_Qwiktrippin.jobs;
+using Lannister_Qwiktrippin.prompts;
 
 namespace Lannister_Qwiktrippin
 {
@@ -15,6 +16,16 @@ namespace Lannister_Qwiktrippin
             Name = _name;
             Manager = new DistrictManager(_managerName, _name);
             Stores = new List<Store>();
+        }
+
+        public static District CreateNewDistrict()
+        {
+            string newDistrictName = EnterDistrictName.Prompt();
+            string newManagerName = EnterEmployeeName.Prompt();
+
+            Console.WriteLine("Successfully created district.");
+
+            return new District(newDistrictName, newManagerName);
         }
     }
 }
