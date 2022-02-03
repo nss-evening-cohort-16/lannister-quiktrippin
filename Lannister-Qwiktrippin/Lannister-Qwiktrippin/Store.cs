@@ -8,14 +8,23 @@ namespace Lannister_Qwiktrippin
 {
     class Store
     {
-       public List<Employee> employees = new List<Employee>();
+        public List<Employee> employees;
+        public int storeNumber;
         public float GasSale { get; set; }
         public float RetailSale { get; set; }
-        public Store(float gasSale, float retailSale)
+        public Store(int _storeNumber, float _gasSale = 0, float _retailSale = 0)
         {
-            GasSale = gasSale;
-            RetailSale = retailSale;
+            GasSale = _gasSale;
+            RetailSale = _retailSale;
             employees = new List<Employee>();
-        }    
+
+        }
+
+        public void AddStoreSale(float _increase)
+        {
+            GasSale += _increase;
+            RetailSale += _increase;
+
+        }
     }
 }
