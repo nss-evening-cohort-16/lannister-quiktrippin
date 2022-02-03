@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Lannister_Qwiktrippin
+namespace Lannister_Qwiktrippin.prompts
 {
     public class EnterStoreNumber
     {

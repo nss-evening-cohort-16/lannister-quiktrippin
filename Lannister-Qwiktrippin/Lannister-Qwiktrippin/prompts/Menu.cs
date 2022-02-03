@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Lannister_Qwiktrippin
+namespace Lannister_Qwiktrippin.prompts
 {
     public class Menu
     {
