@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Lannister_Qwiktrippin.repositories;
 
 namespace Lannister_Qwiktrippin.prompts
 {
@@ -15,7 +16,7 @@ QuikTrip Management Systems
 1. Enter District Sales
 2. Generate District Report
 3. Add New Employee
-4. Add a Store/District
+4. Add a District/Store
 5. Exit
 ");
         }
@@ -33,6 +34,38 @@ QuikTrip Management Systems
             }
 
             return selection;
+        }
+
+        public static void MainMenuLoop()
+        {
+            MainMenu();
+            int selection = MenuSelection(5);
+            switch (selection)
+            {
+                case 1: /* Enter Sales */ break;
+                case 2: /*Generate District Report */ break;
+                case 3: /* Add New Employee */ break;
+                case 4: AddDistrictOrStore(); break;
+                case 5: Environment.Exit(0); break; // Exit program
+            }
+        }
+
+        public static void AddDistrictOrStore()
+        {
+            Console.WriteLine(@"
+Add New District or Store
+1. District
+2. Store
+");
+
+            int selection = MenuSelection(2);
+            switch (selection)
+            {
+                case 1: DistrictRepository.SaveNewDistrict(District.CreateNewDistrict()); break;
+                case 2: /* Create Store */ break;
+            }
+
+            MainMenuLoop();
         }
     }
 }
