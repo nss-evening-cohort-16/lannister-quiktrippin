@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Lannister_Qwiktrippin.repositories;
 
 namespace Lannister_Qwiktrippin.prompts
 {
@@ -61,7 +60,7 @@ Add New District or Store
             int selection = MenuSelection(2);
             switch (selection)
             {
-                case 1: DistrictRepository.SaveNewDistrict(District.CreateNewDistrict()); break;
+                case 1: District.CreateNewDistrict(); break;
                 case 2: /* Create Store */ break;
             }
 
