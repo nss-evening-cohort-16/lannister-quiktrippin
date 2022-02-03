@@ -20,9 +20,13 @@ namespace Lannister_Qwiktrippin
 
         }
 
-        public void AddStoreSale(float _increase)
+        public void AddGasSale(float _increase)
         {
             GasSale += _increase;
+
+        }
+        public void AddRetailSale(float _increase)
+        {
             RetailSale += _increase;
 
         }
