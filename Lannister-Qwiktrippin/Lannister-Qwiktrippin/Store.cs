@@ -17,7 +17,6 @@ namespace Lannister_Qwiktrippin
             GasSale = _gasSale;
             RetailSale = _retailSale;
             employees = new List<Employee>();
-
         }
 
         public void AddGasSale(float _increase)
