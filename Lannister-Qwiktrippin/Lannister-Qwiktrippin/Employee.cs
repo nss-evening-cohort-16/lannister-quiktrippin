@@ -49,8 +49,7 @@ Select job title
             }
             if (emp != null)
             EmployeeRepository.SaveNewEmployee(emp);
-            Console.WriteLine($"" +
-                $@"
+            Console.WriteLine($@"
 Created {job} named {nameInput} at store #{storeInput}");
 
             Menu.MainMenuLoop();
