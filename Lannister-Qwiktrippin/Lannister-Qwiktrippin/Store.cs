@@ -20,7 +20,6 @@ namespace Lannister_Qwiktrippin
             GasSale = _gasSale;
             RetailSale = _retailSale;
             employees = new List<Employee>();
-
         }
 
        
@@ -38,7 +37,8 @@ namespace Lannister_Qwiktrippin
         {
             int newStoreNumber = EnterStoreNumber.Prompt();
             StoreRepository.SaveNewStore(new Store(newStoreNumber));
-            Console.WriteLine($"Sucessfully created store# {newStoreNumber}");
+            Console.WriteLine($@"
+Sucessfully created store #{newStoreNumber}");
       
         }
 

@@ -21,15 +21,16 @@ QuikTrip Management Systems
 ");
         }
 
-        public static int MenuSelection(int _choices)
+        public static int MenuSelection(int _choiceCount)
         {
             int selection;
-            int[] choices = Enumerable.Range(1, _choices).ToArray();
+            int[] choices = Enumerable.Range(1, _choiceCount).ToArray();
 
             string? input = Console.ReadLine();
             while (input == null || !int.TryParse(input, out selection) || !choices.Contains(selection))
             {
-                Console.WriteLine("Enter a Valid Selection");
+                Console.WriteLine(@"
+Enter a Valid Selection");
                 input = Console.ReadLine();
             }
 
@@ -42,12 +43,26 @@ QuikTrip Management Systems
             int selection = MenuSelection(5);
             switch (selection)
             {
-                case 1: /* Enter Sales */ break;
-                case 2: /*Generate District Report */ break;
+                case 1: EnterSales(); break;
+                case 2: GenerateReport(); break;
                 case 3: Employee.CreateNewEmployee();  break;
                 case 4: AddDistrictOrStore(); break;
                 case 5: Environment.Exit(0); break; // Exit program
             }
+        }
+
+        static void EnterSales()
+        {
+            Console.WriteLine(@"
+Enter Sales Records...");
+            MainMenuLoop();
+        }
+
+        static void GenerateReport()
+        {
+            Console.WriteLine(@"
+Generate Report...");
+            MainMenuLoop();
         }
 
         public static void AddDistrictOrStore()

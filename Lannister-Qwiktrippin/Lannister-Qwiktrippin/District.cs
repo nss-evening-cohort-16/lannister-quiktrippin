@@ -26,7 +26,8 @@ namespace Lannister_Qwiktrippin
 
             DistrictRepository.SaveNewDistrict(new District(newDistrictName, newManagerName));
 
-            Console.WriteLine("Successfully created district.");
+            Console.WriteLine(@$"
+Successfully created {newDistrictName} district, managed by {newManagerName}.");
         }
     }
 }

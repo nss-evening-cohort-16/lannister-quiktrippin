@@ -9,12 +9,14 @@ namespace Lannister_Qwiktrippin.prompts
         {
             int storeNumber;
 
-            Console.WriteLine("Enter Store Number");
+            Console.WriteLine(@"
+Enter Store Number");
 
             string? input = Console.ReadLine();
             while (input == null || !int.TryParse(input, out storeNumber))
             {
-                Console.WriteLine("Enter a Valid Store Number");
+                Console.WriteLine(@"
+Enter a Valid Store Number");
                 input = Console.ReadLine();
             }
             return storeNumber;

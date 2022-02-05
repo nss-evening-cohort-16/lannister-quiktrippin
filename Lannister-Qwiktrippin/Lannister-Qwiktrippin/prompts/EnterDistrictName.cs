@@ -7,12 +7,14 @@ namespace Lannister_Qwiktrippin.prompts
     {
         public static string Prompt()
         {
-            Console.WriteLine("Enter District Name");
+            Console.WriteLine(@"
+Enter District Name");
 
             string? input = Console.ReadLine();
             while (input == null)
             {
-                Console.WriteLine("Enter a Valid District Name");
+                Console.WriteLine(@"
+Enter a Valid District Name");
                 input = Console.ReadLine();
             }
             return input;
