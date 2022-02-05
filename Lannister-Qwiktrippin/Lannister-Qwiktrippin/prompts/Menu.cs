@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Lannister_Qwiktrippin;
 
 namespace Lannister_Qwiktrippin.prompts
 {
@@ -43,7 +44,7 @@ QuikTrip Management Systems
             {
                 case 1: /* Enter Sales */ break;
                 case 2: /*Generate District Report */ break;
-                case 3: /* Add New Employee */ break;
+                case 3: Employee.CreateNewEmployee();  break;
                 case 4: AddDistrictOrStore(); break;
                 case 5: Environment.Exit(0); break; // Exit program
             }
