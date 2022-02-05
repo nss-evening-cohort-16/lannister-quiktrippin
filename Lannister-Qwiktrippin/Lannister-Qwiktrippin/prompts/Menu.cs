@@ -62,7 +62,7 @@ Add New District or Store
             switch (selection)
             {
                 case 1: District.CreateNewDistrict(); break;
-                case 2: /* Create Store */ break;
+                case 2: Store.CreateNewStore(); break;
             }
 
             MainMenuLoop();
