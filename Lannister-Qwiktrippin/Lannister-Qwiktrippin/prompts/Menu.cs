@@ -43,12 +43,26 @@ Enter a Valid Selection");
             int selection = MenuSelection(5);
             switch (selection)
             {
-                case 1: /* Enter Sales */ break;
-                case 2: /*Generate District Report */ break;
+                case 1: EnterSales(); break;
+                case 2: GenerateReport(); break;
                 case 3: Employee.CreateNewEmployee();  break;
                 case 4: AddDistrictOrStore(); break;
                 case 5: Environment.Exit(0); break; // Exit program
             }
+        }
+
+        static void EnterSales()
+        {
+            Console.WriteLine(@"
+Enter Sales Records...");
+            MainMenuLoop();
+        }
+
+        static void GenerateReport()
+        {
+            Console.WriteLine(@"
+Generate Report...");
+            MainMenuLoop();
         }
 
         public static void AddDistrictOrStore()

@@ -37,7 +37,8 @@ namespace Lannister_Qwiktrippin
         {
             int newStoreNumber = EnterStoreNumber.Prompt();
             StoreRepository.SaveNewStore(new Store(newStoreNumber));
-            Console.WriteLine($"Sucessfully created store #{newStoreNumber}");
+            Console.WriteLine($@"
+Sucessfully created store #{newStoreNumber}");
       
         }
 
